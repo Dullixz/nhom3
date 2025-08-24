@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bài nhóm 3 - Marketing RTX 5090</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { 
+      scroll-behavior: smooth; 
+      scroll-padding-top: 80px;
+    }
+    body { overflow-y: hidden; }
+    section { 
+      min-height: 100vh; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      padding-top: 4rem; 
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 1s ease, transform 1s ease;
+      will-change: opacity, transform;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    nav ul li a.active::after {
+      content: "";
+      display: block;
+      height: 3px;
+      background-color: #22c55e;
+      transition: all 0.3s ease;
+      transform: scaleX(1);
+    }
+    nav ul li a::after {
+      content: "";
+      display: block;
+      height: 3px;
+      background-color: #22c55e;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    nav ul li a:hover::after { transform: scaleX(1); }
+
+    .feature-img {
+      transition: transform 0.5s ease;
+      will-change: transform;
+    }
+    .feature-img:hover { transform: scale(1.05); }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 w-full bg-gray-800/80 backdrop-blur-sm shadow-lg z-50">
+    <ul class="flex justify-center gap-10 py-4">
+      <li><a href="#gioi-thieu" class="hover:text-green-400 transition">Giới thiệu</a></li>
+      <li><a href="#tinh-nang" class="hover:text-green-400 transition">Tính năng</a></li>
+      <li><a href="#thong-so" class="hover:text-green-400 transition">Thông số</a></li>
+      <li><a href="#mua-ngay" class="hover:text-green-400 transition">Mua ngay</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative h-screen flex flex-col justify-center items-center text-center bg-cover bg-center fade-in" 
+           style="background-image: url('https://copilot.microsoft.com/th/id/BCO.35029ab9-05fe-4463-973d-e6f4432426a4.png');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 px-6">
+      <h1 class="text-6xl md:text-8xl font-extrabold mb-6 tracking-wide">NVIDIA GeForce RTX 5090</h1>
+      <p class="text-2xl md:text-3xl max-w-3xl mx-auto mb-8 text-gray-200">
+        Sức mạnh đỉnh cao, công nghệ đột phá và hiệu năng vô song cho game thủ và nhà sáng tạo nội dung.
+      </p>
+      <a href="#gioi-thieu" class="bg-green-600 hover:bg-green-700 text-white px-10 py-4 rounded-full font-bold text-xl shadow-lg">Khám phá ngay</a>
+    </div>
+  </section>
+
+  <main class="space-y-40 px-6 md:px-16 max-w-7xl mx-auto">
+
+    <!-- Giới thiệu -->
+    <section id="gioi-thieu" class="fade-in">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2 text-left">
+          <h2 class="text-5xl font-bold mb-6 text-green-400">Giới thiệu RTX 5090</h2>
+          <p class="text-xl text-gray-300 mb-4">
+            NVIDIA RTX 5090 là thế hệ card đồ họa cao cấp mới nhất, phát triển trên kiến trúc Blackwell, tối ưu cho gaming, dựng phim, AI và Deep Learning.
+          </p>
+          <p class="text-xl text-gray-300 mb-4">
+            Hiệu năng xử lý hình ảnh đột phá, khả năng tính toán mạnh mẽ và khả năng mở rộng giúp RTX 5090 trở thành lựa chọn hàng đầu cho đồ họa chuyên nghiệp, mô phỏng kỹ thuật và sáng tạo nội dung.
+          </p>
+          <p class="text-xl text-gray-300">
+            Công nghệ tiên tiến như DLSS 4.0, Ray Tracing thế hệ 4, kết hợp bộ nhớ 32GB GDDR7 mang đến trải nghiệm chơi game và thiết kế mượt mà, sắc nét và chân thực.
+          </p>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <img src="https://copilot.microsoft.com/th/id/BCO.35029ab9-05fe-4463-973d-e6f4432426a4.png" alt="RTX 5090" class="rounded-3xl shadow-xl max-w-full h-auto border-4 border-green-400 feature-img" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Tính năng -->
+    <section id="tinh-nang" class="fade-in">
+      <div>
+        <h2 class="text-5xl font-bold mb-12 text-center text-green-400">Tính năng nổi bật</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <!-- Feature 1 -->
+          <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden">
+            <img src="https://copilot.microsoft.com/th/id/BCO.7959c7ae-0d35-4779-b449-86de166cba75.png" 
+                 alt="Hiệu năng vượt trội" class="w-full h-48 object-cover feature-img">
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold mb-4 text-green-300">Hiệu năng vượt trội</h3>
+              <p class="text-gray-400">Tăng hiệu suất hơn 70% so với RTX 4090, hỗ trợ game 8K, render thời gian thực. Dù game nặng hay mô phỏng phức tạp, RTX 5090 luôn mượt mà.</p>
+            </div>
+          </div>
+          <!-- Feature 2 -->
+          <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden">
+            <img src="https://copilot.microsoft.com/th/id/BCO.f3811abb-ead4-4166-ba8b-456ad4c975fd.png" 
+                 alt="Bộ nhớ khủng" class="w-full h-48 object-cover feature-img">
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold mb-4 text-green-300">Bộ nhớ khủng</h3>
+              <p class="text-gray-400">32GB GDDR7, băng thông 1.5TB/s, xử lý dữ liệu lớn, hỗ trợ AI, thiết kế 3D, dựng phim và livestream mượt mà không lag.</p>
+            </div>
+          </div>
+          <!-- Feature 3 -->
+          <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden">
+            <img src="https://copilot.microsoft.com/th/id/BCO.cdcc8b0b-568c-4c44-8621-613f88f82780.png" 
+                 alt="AI & Ray Tracing" class="w-full h-48 object-cover feature-img">
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold mb-4 text-green-300">AI & Ray Tracing</h3>
+              <p class="text-gray-400">DLSS 4.0 với AI và Ray Tracing thế hệ 4 mang ánh sáng và bóng đổ cực kỳ chân thực, nâng trải nghiệm đồ họa lên tầm cao mới.</p>
+            </div>
+          </div>
+          <!-- Feature 4 -->
+          <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden">
+            <img src="https://copilot.microsoft.com/th/id/BCO.705c849b-14d8-4266-b72f-3ceec586ad98.png" 
+                 alt="Tản nhiệt tối ưu" class="w-full h-48 object-cover feature-img">
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold mb-4 text-green-300">Tản nhiệt tối ưu</h3>
+              <p class="text-gray-400">Hệ thống quạt 3D, buồng hơi, giảm tiếng ồn, duy trì nhiệt độ ổn định ngay cả khi tải nặng trong thời gian dài.</p>
+            </div>
+          </div>
+          <!-- Feature 5 -->
+          <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden">
+            <img src="https://copilot.microsoft.com/th/id/BCO.a7992338-6123-4036-bc9a-c72a59f83bf1.png" 
+                 alt="Đa tác vụ" class="w-full h-48 object-cover feature-img">
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold mb-4 text-green-300">Đa tác vụ</h3>
+              <p class="text-gray-400">Dựng phim, livestream, thiết kế CAD, AI/ML, mô phỏng khoa học – RTX 5090 đáp ứng mọi nhu cầu chuyên nghiệp mà không gián đoạn.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Thông số -->
+    <section id="thong-so" class="fade-in">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2">
+          <h2 class="text-5xl font-bold mb-6 text-green-400">Thông số kỹ thuật</h2>
+          <div class="overflow-x-auto bg-gray-800 rounded-3xl shadow-xl p-6">
+            <table class="w-full text-left text-gray-300 border-collapse">
+              <tbody>
+                <tr class="border-b border-gray-700"><th class="py-4 px-4 text-green-300">Kiến trúc GPU</th><td class="py-4 px-4">Blackwell</td></tr>
+                <tr class="border-b border-gray-700"><th class="py-4 px-4 text-green-300">CUDA Cores</th><td class="py-4 px-4">24,576</td></tr>
+                <tr class="border-b border-gray-700"><th class="py-4 px-4 text-green-300">Bộ nhớ</th><td class="py-4 px-4">32GB GDDR7, băng thông 1.5TB/s</td></tr>
+                <tr class="border-b border-gray-700"><th class="py-4 px-4 text-green-300">Công nghệ AI</th><td class="py-4 px-4">DLSS 4.0, Tensor Cores thế hệ 4</td></tr>
+                <tr class="border-b border-gray-700"><th class="py-4 px-4 text-green-300">Ray Tracing</th><td class="py-4 px-4">RT Cores thế hệ 4</td></tr>
+                <tr class="border-b border-gray-700"><th class="py-4 px-4 text-green-300">Công suất tiêu thụ</th><td class="py-4 px-4">600W, nguồn khuyến nghị 1000W+</td></tr>
+                <tr><th class="py-4 px-4 text-green-300">Cổng kết nối</th><td class="py-4 px-4">HDMI 2.1, DisplayPort 2.1</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <img src="https://copilot.microsoft.com/th/id/BCO.ccb8481a-4af1-46a0-8ab0-928f79b0c953.png" 
+               alt="Card RTX 5090 close-up" class="rounded-3xl shadow-xl max-w-full h-auto border-4 border-green-400 feature-img"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mua ngay -->
+    <section id="mua-ngay" class="fade-in text-center bg-gradient-to-r from-green-500 via-emerald-500 to-lime-500 rounded-3xl py-20 px-6 shadow-2xl">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2 text-left">
+          <h2 class="text-5xl font-bold mb-6">Sẵn sàng sở hữu RTX 5090?</h2>
+          <p class="text-xl mb-6">Khám phá hiệu năng đỉnh cao cho game thủ và chuyên gia sáng tạo nội dung với RTX 5090.</p>
+          <a href="https://www.nvidia.com/vi-vn/geforce/graphics-cards/50-series/rtx-5090/#wtb" target="_blank" 
+             class="bg-white text-green-700 px-10 py-4 rounded-full font-semibold text-xl shadow-lg hover:bg-gray-100 transition">Đặt hàng ngay</a>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <img src="https://copilot.microsoft.com/th/id/BCO.7959c7ae-0d35-4779-b449-86de166cba75.png" 
+               alt="RTX 5090 in action" class="rounded-3xl shadow-xl max-w-full h-auto border-4 border-white feature-img"/>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="text-center py-16 text-gray-400">&copy; Bài làm được thực hiện bởi nhóm 3.</footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+        else entry.target.classList.remove('show');
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav ul li a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 200;
+        if (pageYOffset >= sectionTop) current = section.getAttribute('id');
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) link.classList.add('active');
+      });
+    });
+
+    const allSections = document.querySelectorAll('section');
+    let currentIndex = 0;
+    let isScrolling = false;
+    function scrollToSection(index) {
+      if (index < 0 || index >= allSections.length) return;
+      isScrolling = true;
+      currentIndex = index;
+      allSections[index].scrollIntoView({ behavior: "smooth" });
+      setTimeout(() => isScrolling = false, 800);
+    }
+    window.addEventListener('wheel', (e) => {
+      if (isScrolling) return;
+      if (e.deltaY > 0) scrollToSection(currentIndex + 1);
+      else scrollToSection(currentIndex - 1);
+    });
+  </script>
+</body>
+</html>
